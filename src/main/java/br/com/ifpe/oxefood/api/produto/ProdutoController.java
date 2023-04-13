@@ -10,23 +10,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ifpe.oxefood.api.ProdutoRequest;
 import br.com.ifpe.oxefood.modelo.produto.Produto;
 import br.com.ifpe.oxefood.modelo.produto.ProdutoService;
 import br.com.ifpe.oxefood.util.entity.GenericController;
-
 
 @RestController
 @RequestMapping("/api/produto")
 public class ProdutoController extends GenericController {
     
-    @Autowired
+    @Autowired 
     private ProdutoService produtoService;
 
     @PostMapping
     public ResponseEntity<Produto> save(@RequestBody @Valid ProdutoRequest request) {
 
-       Produto produtoNovo = request.build();
+        Produto produtoNovo = request.build();
         Produto produto = produtoService.save(produtoNovo);
         return new ResponseEntity<Produto>(produto, HttpStatus.CREATED);
     }

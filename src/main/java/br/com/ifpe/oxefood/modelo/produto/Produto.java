@@ -1,7 +1,5 @@
 package br.com.ifpe.oxefood.modelo.produto;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -28,18 +26,9 @@ public class Produto extends EntidadeAuditavel  {
     private static final long serialVersionUID = -9147515922627050356L;
 
     @Column
-    private String nome;
+    private String nome_produto;
 
     @Column
-    private LocalDate dataNascimento;
-
-    @Column
-    private String cpf;
-
-    @Column
-    private String foneCelular;
-
-    @Column
-    private String foneFixo;
+    private String cod_produto;
 
 }
