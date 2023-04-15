@@ -23,7 +23,6 @@ public class EntregadorController extends GenericController {
 
     @PostMapping
     public ResponseEntity<Entregador> save(@RequestBody @Valid EntregadorRequest request) {
-
         Entregador entregadorNovo = request.build();
         Entregador entregador = entregadorService.save(entregadorNovo);
         return new ResponseEntity<Entregador>(entregador, HttpStatus.CREATED);

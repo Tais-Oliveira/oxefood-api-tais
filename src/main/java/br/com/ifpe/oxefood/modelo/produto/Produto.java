@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Cliente")
+@Table(name = "produto")
 @Where(clause = "habilitado = true")
 @Builder
 @Getter
@@ -26,9 +26,21 @@ public class Produto extends EntidadeAuditavel  {
     private static final long serialVersionUID = -9147515922627050356L;
 
     @Column
-    private String nome_produto;
+    private String codigo;
 
     @Column
-    private String cod_produto;
+    private String titulo;
+
+    @Column
+    private String descricao;
+
+    @Column
+    private double valorUnitario;
+
+    @Column
+    private int tempoEntregaMinimo;
+
+    @Column
+    private int tempoEntregaMaximo;
 
 }
