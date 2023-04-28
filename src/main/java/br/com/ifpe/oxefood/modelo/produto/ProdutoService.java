@@ -1,4 +1,6 @@
 package br.com.ifpe.oxefood.modelo.produto;
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,4 +21,16 @@ public class ProdutoService extends GenericService {
         return repository.save(produto);
     }
 
+    public List<Produto> listarTodos() {
+  
+        return repository.findAll();
+    }
+ 
+    public Produto obterPorID(Long id) {
+ 
+        return repository.findById(id).get();
+    }
+ 
+
 }
+

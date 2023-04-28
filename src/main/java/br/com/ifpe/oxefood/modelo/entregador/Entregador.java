@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Cliente")
+@Table(name = "Entregador")
 @Where(clause = "habilitado = true")
 @Builder
 @Getter
