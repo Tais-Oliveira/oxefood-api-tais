@@ -27,14 +27,14 @@ public class ClienteRequest {
 
     private String foneFixo;
 
-    public Cliente build(){
+    public Cliente build() {
 
         return Cliente.builder()
                 .nome(nome)
+                .dataNascimento(dataNascimento)
                 .cpf(cpf)
                 .foneCelular(foneCelular)
                 .foneFixo(foneFixo)
-                .dataNascimento(dataNascimento)
                 .build();
     }
 

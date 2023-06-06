@@ -29,9 +29,9 @@ public class EntregadorRequest {
 
     private String foneFixo;
 
-    private int qtdEntregasRealizadas;
+    private Integer qtdEntregasRealizadas;
 
-    private double valorFrete;
+    private Double valorFrete;
 
     private String enderecoRua;
 
@@ -43,11 +43,11 @@ public class EntregadorRequest {
 
     private String enderecoCep;
 
-    private String enferecoUf;
+    private String enderecoUf;
 
     private String enderecoComplemento;
 
-    private boolean ativo;
+    private Boolean ativo;
 
     public Entregador build() {
 
@@ -61,14 +61,14 @@ public class EntregadorRequest {
                 .qtdEntregasRealizadas(qtdEntregasRealizadas)
                 .valorFrete(valorFrete)
                 .enderecoRua(enderecoRua)
+                .enderecoNumero(enderecoNumero)
                 .enderecoBairro(enderecoBairro)
                 .enderecoCidade(enderecoCidade)
                 .enderecoCep(enderecoCep)
-                .enferecoUf(enferecoUf)
+                .enderecoUf(enderecoUf)
                 .enderecoComplemento(enderecoComplemento)
                 .ativo(ativo)
                 .build();
-   }
+    }
 
 }
-

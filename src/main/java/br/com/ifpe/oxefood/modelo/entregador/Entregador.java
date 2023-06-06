@@ -24,17 +24,15 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Entregador extends EntidadeAuditavel  {
-
-    private static final long serialVersionUID = -9147515922627050356L;
+  
+    private static final long serialVersionUID = -8037757879981787501L;
 
     @Column
     private String nome;
 
-    
     @Column
     private String cpf;
 
-   
     @Column
     private String rg;
 
@@ -47,14 +45,12 @@ public class Entregador extends EntidadeAuditavel  {
     @Column
     private String foneFixo;
 
-    
     @Column
-    private int qtdEntregasRealizadas;
+    private Integer qtdEntregasRealizadas;
 
     @Column
     private Double valorFrete;
 
-   
     @Column
     private String enderecoRua;
 
@@ -67,20 +63,16 @@ public class Entregador extends EntidadeAuditavel  {
     @Column
     private String enderecoCidade;
 
-    
     @Column
     private String enderecoCep;
 
-
     @Column
-    private String enferecoUf;
+    private String enderecoUf;
 
-    
     @Column
     private String enderecoComplemento;
 
-
     @Column
-    private boolean ativo;
+    private Boolean ativo;
 
 }

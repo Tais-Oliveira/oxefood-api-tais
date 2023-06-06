@@ -1,4 +1,5 @@
 package br.com.ifpe.oxefood.modelo.comprador;
+
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -22,33 +23,29 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Comprador extends EntidadeAuditavel  {
-
-
-    private static final long serialVersionUID = -9147515922627050356L;
+public class Comprador extends EntidadeAuditavel {
+    
+    private static final long serialVersionUID = 6744535953108071602L;
 
     @Column
     private String nome;
 
-    
     @Column
     private String enderecoComercial;
 
-   
     @Column
     private String enderecoResidencial;
-
+    
     @Column
     private Double comissao;
 
     @Column
-    private Boolean trabalhoHomeOffice;
+    private Boolean trabahoHomeOffice;
 
     @Column
     private int qtdComprasMediasMes;
-
+    
     @Column
     private LocalDate contratadoEm;
-
 
 }

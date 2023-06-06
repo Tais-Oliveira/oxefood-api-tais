@@ -1,4 +1,5 @@
 package br.com.ifpe.oxefood.modelo.comprador;
+
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -10,7 +11,7 @@ import br.com.ifpe.oxefood.util.entity.GenericService;
 
 @Service
 public class CompradorService extends GenericService {
-    
+
     @Autowired
     private CompradorRepository repository;
 
@@ -20,17 +21,10 @@ public class CompradorService extends GenericService {
         super.preencherCamposAuditoria(comprador);
         return repository.save(comprador);
     }
-    
 
     public List<Comprador> listarTodos() {
   
         return repository.findAll();
     }
- 
-    public Comprador obterPorID(Long id) {
- 
-        return repository.findById(id).get();
-    }
- 
 
-} 
+}

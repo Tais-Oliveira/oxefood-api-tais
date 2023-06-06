@@ -13,18 +13,16 @@ import lombok.NoArgsConstructor;
 public class ProdutoRequest {
     
     private String codigo;
-
+    
     private String titulo;
-
+    
     private String descricao;
-
-   
-    private double valorUnitario;
-
-    private int tempoEntregaMinimo;
-
-    private int tempoEntregaMaximo;
-
+    
+    private Double valorUnitario;
+    
+    private Integer tempoEntregaMinimo;
+    
+    private Integer tempoEntregaMaximo;
 
     public Produto build() {
 
@@ -37,6 +35,4 @@ public class ProdutoRequest {
                 .tempoEntregaMaximo(tempoEntregaMaximo)
                 .build();
     }
-
 }
-
